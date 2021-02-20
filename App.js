@@ -10,6 +10,7 @@ import LandingScreen from "./components/auth/Landing";
 import LoginScreen from "./components/auth/Login";
 import RegisterScreen from "./components/auth/Register";
 import MainScreen from "./components/Main";
+import AddScreen from "./components/main/Add";
 import rootReducer from "./redux/reducers";
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
@@ -92,6 +93,7 @@ export class App extends Component {
               component={MainScreen}
               options={{ headerShown: false }}
             />
+            <Stack.Screen name="Add" component={AddScreen} />
           </Stack.Navigator>
         </NavigationContainer>
       </Provider>
