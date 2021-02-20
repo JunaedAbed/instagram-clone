@@ -1,4 +1,5 @@
 import firebase from "firebase";
+import "firebase/firestore";
 import React, { Component } from "react";
 import { Button, TextInput, View } from "react-native";
 
