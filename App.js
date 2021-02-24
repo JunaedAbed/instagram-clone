@@ -12,9 +12,9 @@ import LoginScreen from "./components/auth/Login";
 import RegisterScreen from "./components/auth/Register";
 import MainScreen from "./components/Main";
 import AddScreen from "./components/main/Add";
+import CommentScreen from "./components/main/Comment";
 import SaveScreen from "./components/main/Save";
 import rootReducer from "./redux/reducers";
-
 const store = createStore(rootReducer, applyMiddleware(thunk));
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -103,6 +103,11 @@ export class App extends Component {
             <Stack.Screen
               name="Save"
               component={SaveScreen}
+              navigation={this.props.navigation}
+            />
+            <Stack.Screen
+              name="Comment"
+              component={CommentScreen}
               navigation={this.props.navigation}
             />
           </Stack.Navigator>
